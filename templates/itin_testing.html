@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Itin Application</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .icon {
+            max-width: 1200px; /* Adjust the size of the icon as needed */
+        }
+        .headline {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .notification {
+            font-size: 10px;
+            margin: 20px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">
+        <img src="static/icon.jpg" alt="Large Icon">
+    </div>
+    <div class="headline">
+        <h1>Itin Application</h1>
+    </div>
+    <div class="notification">
+        <h4>You may apply online through google spreadsheet below OR fill out the document manually</h4>
+    </div>
+    <div class="buttons">
+        <a href="https://forms.gle/rXQanmRDtjbcu1hUA" class="button">Online Application</a>
+        <a href="{{ url_for('preview_document') }}" class="button" target="_blank">Preview Document</a>
+        <a href="{{ url_for('download_document') }}" class="button">Download Document</a>
+    </div>
+</body>
+</html>
